@@ -21,3 +21,15 @@
 # for num in range(101):
 #     total = total + num
 # print(total)
+
+
+
+# import random
+
+# random_num = random.randint(0, 10000)
+# print(random_num)
+
+
+import pyperclip
+pyperclip.copy('The text to be copied to the clipboard.')
+pyperclip.paste()
