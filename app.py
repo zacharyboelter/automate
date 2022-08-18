@@ -41,29 +41,42 @@
 # hello()
 # hello()
 
-import random
+# import random
 
-def getAnswer(answerNumber):
-    if answerNumber == 1:
-        return 'It certainly is'
-    elif answerNumber == 2:
-        return 'It is decidedly so.'
-    elif answerNumber == 3:
-        return 'Yes'
-    elif answerNumber == 4:
-        return 'Reply hazy, try again'
-    elif answerNumber == 5:
-        return 'Ask again later'
-    elif answerNumber == 6:
-        return 'Concentrate and ask again'
-    elif answerNumber == 7:
-        return 'My answer is no'
-    elif answerNumber == 8:
-        return 'Outlook not so good'
-    elif answerNumber == 9:
-        return 'Very doubtful'
+# def getAnswer(answerNumber):
+#     if answerNumber == 1:
+#         return 'It certainly is'
+#     elif answerNumber == 2:
+#         return 'It is decidedly so.'
+#     elif answerNumber == 3:
+#         return 'Yes'
+#     elif answerNumber == 4:
+#         return 'Reply hazy, try again'
+#     elif answerNumber == 5:
+#         return 'Ask again later'
+#     elif answerNumber == 6:
+#         return 'Concentrate and ask again'
+#     elif answerNumber == 7:
+#         return 'My answer is no'
+#     elif answerNumber == 8:
+#         return 'Outlook not so good'
+#     elif answerNumber == 9:
+#         return 'Very doubtful'
 
-print('Think of a question to ask me.')
-input()
+# print('Think of a question to ask me.')
+# input()
 
-print(getAnswer(random.randint(1, 9)))
+# print(getAnswer(random.randint(1, 9)))
+
+
+def div42by(divideBy):
+    try:
+        return 42 / divideBy
+    except ZeroDivisionError:
+        print('Error: You tried to divide by zero!')
+
+
+print(div42by(2))
+print(div42by(10))
+print(div42by(0))
+print(div42by(1))
