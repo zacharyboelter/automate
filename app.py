@@ -69,14 +69,40 @@
 # print(getAnswer(random.randint(1, 9)))
 
 
-def div42by(divideBy):
-    try:
-        return 42 / divideBy
-    except ZeroDivisionError:
-        print('Error: You tried to divide by zero!')
+# def div42by(divideBy):
+#     try:
+#         return 42 / divideBy
+#     except ZeroDivisionError:
+#         print('Error: You tried to divide by zero!')
 
 
-print(div42by(2))
-print(div42by(10))
-print(div42by(0))
-print(div42by(1))
+# print(div42by(2))
+# print(div42by(10))
+# print(div42by(0))
+# print(div42by(1))
+
+
+import random
+print('What is your name?')
+name = input()
+secretNumer = random.randint(1, 20)
+print(f'Hello {name}, I am think of a number between 1 and 20')
+
+# set the number of guesses to 6
+for guessesTaken in range(1, 7):
+    print('Take a guess')
+    guess = int(input()) 
+    if guess < secretNumer:
+        print('That number is too low, guess again.')
+    elif guess > secretNumer:
+        print('That number is too high, try again')
+    else:
+        break #this is the correct guess, break out of loop
+   
+
+# closing message
+
+if guess == secretNumer:
+    print(f'Good job {name}, the number was {secretNumer}!')
+else:
+    print(f'So sorry {name}, the number was {secretNumer}')
