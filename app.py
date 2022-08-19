@@ -82,27 +82,37 @@
 # print(div42by(1))
 
 
-import random
-print('What is your name?')
-name = input()
-secretNumer = random.randint(1, 20)
-print(f'Hello {name}, I am think of a number between 1 and 20')
+# import random
+# print('What is your name?')
+# name = input()
+# secretNumer = random.randint(1, 20)
+# print(f'Hello {name}, I am think of a number between 1 and 20')
 
-# set the number of guesses to 6
-for guessesTaken in range(1, 7):
-    print('Take a guess')
-    guess = int(input()) 
-    if guess < secretNumer:
-        print('That number is too low, guess again.')
-    elif guess > secretNumer:
-        print('That number is too high, try again')
-    else:
-        break #this is the correct guess, break out of loop
+# # set the number of guesses to 6
+# for guessesTaken in range(1, 7):
+#     print('Take a guess')
+#     guess = int(input()) 
+#     if guess < secretNumer:
+#         print('That number is too low, guess again.')
+#     elif guess > secretNumer:
+#         print('That number is too high, try again')
+#     else:
+#         break #this is the correct guess, break out of loop
    
 
-# closing message
+# # closing message
 
-if guess == secretNumer:
-    print(f'That was it {name}! The number was {str(secretNumer)} and it only took you {str(guessesTaken)} guesses. Great job.')
-else:
-    print(f'So sorry {name}, the number was {str(secretNumer)}')
+# if guess == secretNumer:
+#     print(f'That was it {name}! The number was {str(secretNumer)} and it only took you {str(guessesTaken)} guesses. Great job.')
+# else:
+#     print(f'So sorry {name}, the number was {str(secretNumer)}')
+
+
+
+# Functions with lists 
+# ~~~~For loop~~~~~~
+
+supplies = ['pens', 'scissors', 'paper', 'water', 'computers', 'phones', 'notebooks']
+
+for i in range(len(supplies)):
+    print(f'Index: {i}. Item: {supplies[i]}')
