@@ -112,7 +112,31 @@
 # Functions with lists 
 # ~~~~For loop~~~~~~
 
-supplies = ['pens', 'scissors', 'paper', 'water', 'computers', 'phones', 'notebooks']
+# supplies = ['pens', 'scissors', 'paper', 'water', 'computers', 'phones', 'notebooks']
 
-for i in range(len(supplies)):
-    print(f'Index: {i}. Item: {supplies[i]}')
+# for i in range(len(supplies)):
+#     print(f'Index: {i}. Item: {supplies[i]}')
+
+
+# ~~~~~Multiple Assignment ~~~~~~~~
+
+dog = ['white', '50lbs', 'blue', 'labradoodle']
+
+color, weight, eyes, breed = dog
+print(color)
+
+
+spam = 42
+spam += 1
+print(spam)
+
+
+
+#~~~ import copy to have immutable list
+import copy
+
+spam = ['A', 'B', 1, 2, 3]
+cheese = copy.deepcopy(spam)
+cheese[1] = 42
+print(cheese)
+print(spam)
