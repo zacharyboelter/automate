@@ -103,6 +103,6 @@ for guessesTaken in range(1, 7):
 # closing message
 
 if guess == secretNumer:
-    print(f'That was it {name}! The number was {secretNumer} and it only took you {guessesTaken} guesses. Great job.')
+    print(f'That was it {name}! The number was {secretNumer} and it only took you {str(guessesTaken)} guesses. Great job.')
 else:
     print(f'So sorry {name}, the number was {secretNumer}')
