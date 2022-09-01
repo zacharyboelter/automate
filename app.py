@@ -178,3 +178,12 @@ for i in eggs.items():
 
 print(eggs.get('milk', 0))      #get the milk key, otherwise return 0
 print(eggs.get('age', 10))      #get the age key, otherwise return 10
+
+#~~~~~~~~ SetDefault ~~~~~~~~
+
+# if 'species' not in eggs:
+#     eggs['species'] = 'dog'
+
+eggs.setdefault('species', 'elephant')          #if no 'species' key value pair, then make one and set it this this.
+
+print(eggs)
