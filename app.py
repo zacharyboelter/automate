@@ -120,23 +120,40 @@
 
 # ~~~~~Multiple Assignment ~~~~~~~~
 
-dog = ['white', '50lbs', 'blue', 'labradoodle']
+# dog = ['white', '50lbs', 'blue', 'labradoodle']
 
-color, weight, eyes, breed = dog
-print(color)
-
-
-spam = 42
-spam += 1
-print(spam)
+# color, weight, eyes, breed = dog
+# print(color)
 
 
+# spam = 42
+# spam += 1
+# print(spam)
 
-#~~~ import copy to have immutable list
-import copy
 
-spam = ['A', 'B', 1, 2, 3]
-cheese = copy.deepcopy(spam)
-cheese[1] = 42
-print(cheese)
-print(spam)
+
+# #~~~ import copy to have immutable list
+# import copy
+
+# spam = ['A', 'B', 1, 2, 3]
+# cheese = copy.deepcopy(spam)
+# cheese[1] = 42
+# print(cheese)
+# print(spam)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  DICTIONARIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+myDog = {
+    'size': 'athletic',
+    'color': 'white and brown',
+    'dispostion': 'good boi'
+}
+
+eggs = {'name': 'bill', 'age': '3', 'color': 'blue'}
+ham = {'age': '3', 'name': 'bill', 'color': 'blue'}
+
+print(eggs == ham)               #dictionaries are unordered
+
+'name' in eggs                  #true   
+'name' not in ham               #false
+
+'dob' in eggs                   #key error                      
