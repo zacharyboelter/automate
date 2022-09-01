@@ -151,9 +151,30 @@ myDog = {
 eggs = {'name': 'bill', 'age': '3', 'color': 'blue'}
 ham = {'age': '3', 'name': 'bill', 'color': 'blue'}
 
-print(eggs == ham)               #dictionaries are unordered
+# print(eggs == ham)               #dictionaries are unordered
 
 'name' in eggs                  #true   
 'name' not in ham               #false
 
-'dob' in eggs                   #key error                      
+'dob' in eggs                   #key error  
+
+#~~~~~~ Dictionary Methods ~~~~~~~~~~~
+
+# print(list(eggs.keys()))
+# print(list(eggs.values()))
+# print(list(eggs.items()))
+
+# for k in eggs.keys():
+#     print(k)
+
+# for v in eggs.values():
+#     print(v)
+
+# for k, v in eggs.items():
+#     print(k, v)
+
+for i in eggs.items():
+    print(i)
+
+print(eggs.get('milk', 0))      #get the milk key, otherwise return 0
+print(eggs.get('age', 10))      #get the age key, otherwise return 10
