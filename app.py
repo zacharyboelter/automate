@@ -142,21 +142,21 @@
 # print(spam)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  DICTIONARIES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-myDog = {
-    'size': 'athletic',
-    'color': 'white and brown',
-    'dispostion': 'good boi'
-}
+# myDog = {
+#     'size': 'athletic',
+#     'color': 'white and brown',
+#     'dispostion': 'good boi'
+# }
 
-eggs = {'name': 'bill', 'age': '3', 'color': 'blue'}
-ham = {'age': '3', 'name': 'bill', 'color': 'blue'}
+# eggs = {'name': 'bill', 'age': '3', 'color': 'blue'}
+# ham = {'age': '3', 'name': 'bill', 'color': 'blue'}
 
-# print(eggs == ham)               #dictionaries are unordered
+# # print(eggs == ham)               #dictionaries are unordered
 
-'name' in eggs                  #true   
-'name' not in ham               #false
+# 'name' in eggs                  #true   
+# 'name' not in ham               #false
 
-'dob' in eggs                   #key error  
+# 'dob' in eggs                   #key error  
 
 #~~~~~~ Dictionary Methods ~~~~~~~~~~~
 
@@ -173,17 +173,63 @@ ham = {'age': '3', 'name': 'bill', 'color': 'blue'}
 # for k, v in eggs.items():
 #     print(k, v)
 
-for i in eggs.items():
-    print(i)
+# for i in eggs.items():
+#     print(i)
 
-print(eggs.get('milk', 0))      #get the milk key, otherwise return 0
-print(eggs.get('age', 10))      #get the age key, otherwise return 10
+# print(eggs.get('milk', 0))      #get the milk key, otherwise return 0
+# print(eggs.get('age', 10))      #get the age key, otherwise return 10
 
-#~~~~~~~~ SetDefault ~~~~~~~~
+# #~~~~~~~~ SetDefault ~~~~~~~~
 
-# if 'species' not in eggs:
-#     eggs['species'] = 'dog'
+# # if 'species' not in eggs:
+# #     eggs['species'] = 'dog'
 
-eggs.setdefault('species', 'elephant')          #if no 'species' key value pair, then make one and set it this this.
+# eggs.setdefault('species', 'elephant')          #if no 'species' key value pair, then make one and set it this this.
 
-print(eggs)
+# print(eggs)
+
+
+
+
+#~~~~~~~~~~~~~~~~~ Character Count ~~~~~~~~~~~~~~~~
+
+import pprint
+
+message = '''When I die I want your hands on my eyes:
+I want the light and the wheat of your beloved hands
+to pass their freshness over me one more time
+to feel the smoothness that changed my destiny.
+
+I want you to live while I wait for you, asleep,
+I want for your ears to go on hearing the wind,
+for you to smell the sea that we loved together
+and for you to go on walking the sand where we walked.
+
+I want for what I love to go on living
+and as for you I loved you and sang you above everything,
+for that, go on flowering, flowery one,
+
+so that you reach all that my love orders for you,
+so that my shadow passes through your hair,
+so that they know by this the reason for my song.'''
+count = {}
+
+for character in message.upper():
+    count.setdefault(character, 0)
+    count[character] = count[character] + 1
+
+pprint.pprint(count)
+
+
+theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ', 'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ', 'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+
+pprint.pprint(theBoard)
+
+def printBoard(board):
+    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print('-----')
+    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print('-----')
+    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+
+printBoard(theBoard)
