@@ -221,29 +221,54 @@ import pprint
 # pprint.pprint(count)
 
 
-theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ', 'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ', 'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
+# theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ', 'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ', 'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
 
-pprint.pprint(theBoard)
+# pprint.pprint(theBoard)
 
-def printBoard(board):
-    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
-    print('-----')
-    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
-    print('-----')
-    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
+# def printBoard(board):
+#     print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+#     print('-----')
+#     print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+#     print('-----')
+#     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
 
 
-turn = 'X'
+# turn = 'X'
 
-for i in range(9):
-    printBoard(theBoard)
-    print('Turn for ' + turn + '. Move on which space?')
-    move = input()
-    theBoard[move] = turn
-    if turn == 'X':
-        turn = 'O'
-    else:
-        turn = 'X'
-printBoard(theBoard) 
+# for i in range(9):
+#     printBoard(theBoard)
+#     print('Turn for ' + turn + '. Move on which space?')
+#     move = input()
+#     theBoard[move] = turn
+#     if turn == 'X':
+#         turn = 'O'
+#     else:
+#         turn = 'X'
+# printBoard(theBoard) 
 
+
+
+# ~~~~~~~~~~~~~~~~~~~ String MEthods ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# while True:
+#     print('Enter your age: ')
+#     age = input()
+#     if age.isdecimal():
+#         break
+#     print('Please enter a number for your age')
+# while True:
+#     print('Select a new password (numbers and letters only!)')
+#     password = input()
+#     if password.isalnum():
+#         break
+#     print('Passwords can have only numbers and letters you twat!')
+
+def printPicnic(itemsDict, leftWidth, rightWidth):
+    print('PICNIC ITEMS'.center(leftWidth + rightWidth, '-'))               #prints title for table in center with dashes on left and right
+    for k, v in itemsDict.items():                                          #for loop that iterates over key value pairs
+        print(k.ljust(leftWidth, '.') + str(v).rjust(rightWidth))           #print the key with ... to fill space, then adjust values to right side
+
+picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+printPicnic(picnicItems, 12, 5)
+printPicnic(picnicItems, 12, 20)
