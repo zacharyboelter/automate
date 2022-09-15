@@ -195,30 +195,30 @@
 
 import pprint
 
-message = '''When I die I want your hands on my eyes:
-I want the light and the wheat of your beloved hands
-to pass their freshness over me one more time
-to feel the smoothness that changed my destiny.
+# message = '''When I die I want your hands on my eyes:
+# I want the light and the wheat of your beloved hands
+# to pass their freshness over me one more time
+# to feel the smoothness that changed my destiny.
 
-I want you to live while I wait for you, asleep,
-I want for your ears to go on hearing the wind,
-for you to smell the sea that we loved together
-and for you to go on walking the sand where we walked.
+# I want you to live while I wait for you, asleep,
+# I want for your ears to go on hearing the wind,
+# for you to smell the sea that we loved together
+# and for you to go on walking the sand where we walked.
 
-I want for what I love to go on living
-and as for you I loved you and sang you above everything,
-for that, go on flowering, flowery one,
+# I want for what I love to go on living
+# and as for you I loved you and sang you above everything,
+# for that, go on flowering, flowery one,
 
-so that you reach all that my love orders for you,
-so that my shadow passes through your hair,
-so that they know by this the reason for my song.'''
-count = {}
+# so that you reach all that my love orders for you,
+# so that my shadow passes through your hair,
+# so that they know by this the reason for my song.'''
+# count = {}
 
-for character in message.upper():
-    count.setdefault(character, 0)
-    count[character] = count[character] + 1
+# for character in message.upper():
+#     count.setdefault(character, 0)
+#     count[character] = count[character] + 1
 
-pprint.pprint(count)
+# pprint.pprint(count)
 
 
 theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ', 'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ', 'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
@@ -232,4 +232,18 @@ def printBoard(board):
     print('-----')
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
-printBoard(theBoard)
+
+
+turn = 'X'
+
+for i in range(9):
+    printBoard(theBoard)
+    print('Turn for ' + turn + '. Move on which space?')
+    move = input()
+    theBoard[move] = turn
+    if turn == 'X':
+        turn = 'O'
+    else:
+        turn = 'X'
+printBoard(theBoard) 
+
